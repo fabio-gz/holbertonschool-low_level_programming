@@ -25,6 +25,10 @@ int _atoi(char *s)
 		{
 			sign = sign * -1;
 		}
+		else if (num > 0)
+		{
+			break;
+		}
 	}
 	return (num * sign);
 }
