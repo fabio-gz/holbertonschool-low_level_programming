@@ -6,17 +6,12 @@
  */
 void reverse_array(int *a, int n)
 {
-	int i;
+	int i, t;
 
-	for (; a[n] != '\0';)
+	for (i = 0; i < n / 2; i++)
 	{
-		a++;
+		t = a[i];
+		a[i] = a[n - 1 - i];
+		a[n - 1 - i] = t;
 	}
-	i = n - 1;
-
-	for (; i > 0; i--)
-	{
-		_putchar(a[i]);
-	}
-	_putchar('\n');
 }
