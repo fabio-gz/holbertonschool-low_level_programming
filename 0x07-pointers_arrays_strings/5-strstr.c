@@ -11,11 +11,11 @@ char *_strstr(char *haystack, char *needle)
 	{
 		if (*haystack == *needle)
 		{
-			for (;*needle != '\0'; needle ++)
+			for (; *needle != '\0'; needle++)
 			{
 				return (needle);
 			}
 		}
 	}
-	return (haystack);
+	return (needle);
 }
