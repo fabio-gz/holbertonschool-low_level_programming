@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  *main - sums of two numbers
  *@argv: argument vector
@@ -9,13 +10,14 @@
 int main(int argc, char *argv[])
 {
 	int n;
+	int m = 0;
 	int sum = 0;
 
 	if (argc > 1)
 	{
-		for (n = 0; n < argc; n++)
+		for (n = 1; n < argc; n++)
 		{
-			if (atoi(argv[n]) < 48 && atoi(argv[n]) > 57)
+			if (!(isdigit(argv[n][m])))
 			{
 				printf("Error\n");
 				return (1);
