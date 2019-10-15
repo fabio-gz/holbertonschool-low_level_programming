@@ -43,10 +43,10 @@ char *_strdup(char *str)
 	char *cpy;
 
 	if (str == '\0')
-		return ('\0');
-	cpy = malloc(_strlen(str) * sizeof(char));
+		return (NULL);
+	cpy = malloc(_strlen(str) * sizeof(*cpy) + 1);
 	if (cpy == '\0')
-		return ('\0');
+		return (NULL);
 	_strcpy(cpy, str);
 	return (cpy);
 }
