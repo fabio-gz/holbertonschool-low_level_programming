@@ -49,8 +49,10 @@ char *str_concat(char *s1, char *s2)
 {
 	char *conc;
 
-	if (s1 == '\0' && s2 == '\0')
-		return (NULL);
+	if (s1 == '\0')
+		s1 = "";
+	if (s2 == '\0')
+		s2 = "";
 	conc = malloc(((_strlen(s1) + _strlen(s2)) * sizeof(char)) + 1);
 	if (conc == '\0')
 		return (NULL);
