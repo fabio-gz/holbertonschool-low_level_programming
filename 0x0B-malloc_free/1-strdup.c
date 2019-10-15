@@ -44,7 +44,7 @@ char *_strdup(char *str)
 
 	if (str == '\0')
 		return (NULL);
-	cpy = malloc(_strlen(str) * sizeof(*cpy) + 1);
+	cpy = malloc((_strlen(str) * 1) + 1);
 	if (cpy == '\0')
 		return (NULL);
 	_strcpy(cpy, str);
