@@ -16,7 +16,7 @@ void print_all(const char * const format, ...)
 	va_start(argmt, format);
 
 	i = 0;
-	while (format[i] != '\0')
+	while (format[i] != '\0' && argmt != '\0')
 	{
 		switch (format[i])
 		{
