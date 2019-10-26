@@ -2,7 +2,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 /**
- *print_number - print numbers
+ *print_numbers - print numbers
  *@separator: string separator
  *@n: number of arguments
  */
@@ -17,7 +17,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		value = va_arg(numbers, int);
 		printf("%i", value);
-		if(i < n - 1 && separator != NULL)
+		if (i < n - 1 && separator != NULL)
 		{
 			printf("%s", separator);
 		}
