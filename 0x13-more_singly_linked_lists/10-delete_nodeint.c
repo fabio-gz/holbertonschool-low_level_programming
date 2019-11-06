@@ -30,7 +30,7 @@ int pop_listint(listint_t **head)
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	unsigned int i = 0;
-	int res = 1;
+	int res = -1;
 	listint_t *curr = *head;
 	listint_t *tmp = NULL;
 
@@ -44,11 +44,14 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 
 		curr = curr->next;
 	}
+
 	tmp = curr->next;
 	res = tmp->n;
+	if (tmp == NULL || tmp->next == NULL)
+		return (-1);
+
 	curr->next = tmp->next;
 	free(tmp);
 
 	return (res);
-	return (1);
 }
