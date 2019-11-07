@@ -17,7 +17,7 @@ int _strlen(const char *s)
 	return (n);
 }
 /**
- *binaty_to_uint - converts binary to int
+ *binary_to_uint - converts binary to int
  *@b: string of numbers
  *Return: converted number
  */
